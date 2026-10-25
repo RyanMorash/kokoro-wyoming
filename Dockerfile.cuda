@@ -20,5 +20,6 @@ COPY requirements.txt .
 RUN pip3 install --break-system-packages -r requirements.txt
 
 COPY src/ /app/src/
+COPY VERSION /app/VERSION
 
 ENTRYPOINT ["/usr/bin/python3", "main.py"]
