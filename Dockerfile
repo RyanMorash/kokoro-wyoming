@@ -16,5 +16,6 @@ COPY requirements-openvino.txt .
 RUN pip install -r requirements-openvino.txt
 
 COPY src/ /app/src/
+COPY VERSION /app/VERSION
 
 ENTRYPOINT ["/usr/local/bin/python3", "main.py"]
